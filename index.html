@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デッキ分布生成</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>デッキ分布生成（イメージ）</h1>
+    <label>
+        デッキ情報（本来はDBなど）<br>
+        <textarea name="deck-info" id="deck-info" class="deck-info"></textarea>
+    </label>
+    <br>
+    <button id="distribution-button" name="distribution-button" class="main-button">分布生成</button>
+    <br>
+
+    <label>
+        デッキ定義（本来はjsonファイルなど）<br>
+        <textarea name="deck-def" id="deck-def" class="deck-def"></textarea>
+    </label>
+    <br>
+    <hr>
+    <label>
+        分布<br>
+        <table>
+            <thead>
+                <th>デッキ名</th>
+                <th>数</th>
+                <th>%</th>
+                <th>デッキ画像</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </label>
+</body>
+</html>
