@@ -63,5 +63,5 @@ export function createDistribution() {
 
 function appendRow(name, num, sum, image) {
     // デッキ名、数、%、画像URL
-    HTMLUtils.appendTBody(distributionTable, name, num, Math.round(num * 100/ sum), image);
+    HTMLUtils.appendTBody(distributionTable, name, num, Math.round(num * 1000/ sum) / 10.0, image);
 }
