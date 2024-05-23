@@ -47,6 +47,9 @@ export function createDistribution() {
     const deckDistributionMap = new DeckDistributionMap(deckDefs);
     deckDistributionMap.countArray(...deckInfos);
 
+    // 表をクリア
+    HTMLUtils.refreshTBody(distributionTable);
+
     // 表を作成
     deckDistributionMap.desc((deckDef, num) => {
         if (num <= 0) {
@@ -60,5 +63,5 @@ export function createDistribution() {
 
 function appendRow(name, num, sum, image) {
     // デッキ名、数、%、画像URL
-    HTMLUtils.appendBody(distributionTable, name, num, Math.round(num * 100/ sum), image);
+    HTMLUtils.appendTBody(distributionTable, name, num, Math.round(num * 100/ sum), image);
 }
