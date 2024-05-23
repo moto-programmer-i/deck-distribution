@@ -53,6 +53,7 @@ export class DeckDef {
      * @param {string} json JSONから生成されたオブジェクト（値のみ）
      * @returns {DeckDef}
      */
+    // JSONからちゃんとデシリアライズするライブラリを使えばこの辺は不要
     static fromJSON(json) {
         const instance = new DeckDef();
         instance.name = json.name;

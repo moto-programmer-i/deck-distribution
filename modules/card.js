@@ -62,6 +62,7 @@ export class Card {
      * @param {string} json JSONから生成されたオブジェクト（値のみ）
      * @returns {Card}
      */
+    // JSONからちゃんとデシリアライズするライブラリを使えばこの辺は不要
     static fromJSON(json) {
         const instance = new Card();
         Object.assign(instance, json);
