@@ -17,6 +17,12 @@ export class DeckDef {
     cards = [];
 
     /**
+     * デッキ画像(URL)
+     * @type {string}
+     */
+    image;
+
+    /**
      * 正規表現初期化
      * （インスタンス生成後に呼び出す必要がある）
      */
@@ -50,6 +56,7 @@ export class DeckDef {
     static fromJSON(json) {
         const instance = new DeckDef();
         instance.name = json.name;
+        instance.image = json.image;
         for(const e of json.cards) {
             instance.cards.push(Card.fromJSON(e));
         }

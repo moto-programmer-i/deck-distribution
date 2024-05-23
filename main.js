@@ -53,12 +53,12 @@ export function createDistribution() {
             return;
         }
 
-        appendRow(deckDef.name, num, deckInfos.length);
+        appendRow(deckDef.name, num, deckInfos.length, deckDef.image);
     });
     appendRow("その他", deckDistributionMap.getOthersNum(), deckInfos.length);
 }
 
-function appendRow(name, num, sum) {
-    // デッキ名、数、%
-    HTMLUtils.appendBody(distributionTable, name, num, Math.round(num * 100/ sum));
+function appendRow(name, num, sum, image) {
+    // デッキ名、数、%、画像URL
+    HTMLUtils.appendBody(distributionTable, name, num, Math.round(num * 100/ sum), image);
 }
