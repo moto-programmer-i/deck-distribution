@@ -53,6 +53,9 @@ export class DeckDistributionMap {
         
         // 全くマッチしなければその他を増やす
         ++this.#othersNum;
+
+        // その他に分類されたデッキのログをとる
+        console.log("その他 " + deckInfo.url);
     }
 
     /**
